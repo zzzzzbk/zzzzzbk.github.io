@@ -1,7 +1,7 @@
 title: Bokun Zheng
-email: your.email@example.com
+email: zhengbk@hotmail.com
 description: >-
-  Personal website of Bokun Zheng, including education, research, projects, and blog posts.
+  Personal website of Bokun Zheng
 baseurl: ""
 url: "https://zzzzzbk.github.io"
 theme: minima
@@ -10,7 +10,6 @@ plugins:
 
 header_pages:
   - index.md
-  - education.md
   - research.md
   - projects.md
   - blog.md

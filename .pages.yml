@@ -1,0 +1,117 @@
+media:
+  input: assets/img
+  output: /assets/img
+
+content:
+  - name: home
+    label: Home page
+    type: file
+    path: index.md
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+      - name: title
+        type: string
+      - name: permalink
+        type: string
+      - name: body
+        type: rich-text
+        options:
+          format: html
+
+  - name: pages
+    label: Site pages
+    type: group
+    items:
+      - name: research-index
+        label: Research index
+        type: file
+        path: research.md
+        fields:
+          - name: layout
+            type: string
+            hidden: true
+          - name: title
+            type: string
+          - name: permalink
+            type: string
+          - name: body
+            type: rich-text
+            options:
+              format: html
+
+      - name: projects
+        label: Projects
+        type: file
+        path: projects.md
+        fields:
+          - name: layout
+            type: string
+            hidden: true
+          - name: title
+            type: string
+          - name: permalink
+            type: string
+          - name: body
+            type: rich-text
+            options:
+              format: html
+
+      - name: blog-index
+        label: Blog index
+        type: file
+        path: blog.md
+        fields:
+          - name: layout
+            type: string
+            hidden: true
+          - name: title
+            type: string
+          - name: permalink
+            type: string
+          - name: body
+            type: rich-text
+
+  - name: posts
+    label: Blog posts
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{title}.md"
+    format: yaml-frontmatter
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+      - name: title
+        type: string
+      - name: date
+        type: date
+      - name: body
+        type: rich-text
+
+  - name: research
+    label: Research projects
+    type: collection
+    path: research
+    format: yaml-frontmatter
+    view:
+      primary: title
+      sort: title
+      order: asc
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+      - name: title
+        type: string
+      - name: permalink
+        type: string
+      - name: body
+        type: rich-text
+        options:
+          format: html

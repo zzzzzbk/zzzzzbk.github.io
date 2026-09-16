@@ -1,0 +1,605 @@
+---
+# Front matter required so Jekyll processes this SCSS file into /assets/main.css
+---
+
+// Widen the site: minima builds .wrapper's max-width from this variable.
+// It MUST be set before the @import below to take effect.
+$content-width: 1140px;
+
+@import "minima";
+
+/* =========================================================================
+   Custom "bold & modern" styling on top of minima
+   ========================================================================= */
+
+/* Belt-and-suspenders: also widen the wrapper via plain CSS in case the
+   theme version ignores the SCSS variable above. (minima keeps 30px side
+   padding, so the visible text column is this minus 60px.) */
+.wrapper {
+  max-width: calc(1140px - (30px * 2));
+}
+
+:root {
+  --accent:        #1e6f8e;   /* deep teal */
+  --accent-strong: #0f4c61;
+  --accent-warm:   #e8743b;   /* warm highlight */
+  --ink:           #1f2933;
+  --surface:       #ffffff;
+  --surface-alt:   #f4f7f9;
+  --radius:        14px;
+  --shadow:        0 10px 30px rgba(15, 76, 97, 0.12);
+  --shadow-hover:  0 18px 44px rgba(15, 76, 97, 0.22);
+}
+
+/* =========================================================================
+   Home page — intro / education / interests
+   ========================================================================= */
+
+/* 1. Intro panel: portrait photo left, text right */
+.intro {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2.2rem;
+  align-items: center;
+  margin: 0.5rem 0 3rem;
+}
+/* Photo shown UNCROPPED at its natural proportions.
+   width fills the column; height follows the image (so a 9:16 photo stays 9:16). */
+.intro-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+/* Placeholder can't know the real image size, so we hint a 9:16 frame here only. */
+.intro-photo .placeholder {
+  aspect-ratio: 9 / 16;
+  min-height: 0;
+}
+.intro-hi {
+  margin: 0;
+  color: var(--accent-warm);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.intro-name {
+  margin: 0.1rem 0 0.2rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.intro-role {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #52606d;
+}
+.intro-role::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+}
+.intro-text > p {
+  line-height: 1.65;
+}
+.intro-links {
+  margin-top: 1.1rem;
+}
+.intro-links a {
+  display: inline-block;
+  margin-right: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.intro-links a:hover {
+  color: var(--accent-strong);
+  border-bottom-color: var(--accent-warm);
+}
+
+/* Shared home section header */
+.home-section {
+  margin: 0 0 3rem;
+}
+.home-section-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+  display: inline-block;
+}
+.home-section-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 0.4rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+}
+.home-section-lead {
+  color: #52606d;
+  margin: 0.3rem 0 1.4rem;
+}
+
+/* 3. Interest cards */
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.interest-card {
+  background: var(--surface);
+  border: 1px solid rgba(15, 76, 97, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.4rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.interest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.interest-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+.interest-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+.interest-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #52606d;
+}
+
+/* Section intro headings ------------------------------------------------- */
+.section-head {
+  margin-bottom: 1.6rem;
+}
+.section-head h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.3rem;
+  line-height: 1.1;
+}
+.section-head .lead {
+  color: #52606d;
+  font-size: 1.05rem;
+  max-width: 55ch;
+  margin: 0;
+}
+.section-head::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 5px;
+  margin-top: 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+}
+
+/* Generic image placeholder box ----------------------------------------- */
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  border: 2px dashed rgba(30, 111, 142, 0.45);
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg, rgba(30, 111, 142, 0.10), rgba(232, 116, 59, 0.10));
+  min-height: 180px;
+}
+.placeholder small {
+  display: block;
+  font-weight: 500;
+  opacity: 0.7;
+  margin-top: 0.35rem;
+}
+
+/* =========================================================================
+   Education timeline
+   ========================================================================= */
+.edu-list {
+  margin: 0;
+  padding: 0;
+}
+.edu-item {
+  position: relative;
+  padding: 0.15rem 0 0.4rem 1.4rem;
+  margin-bottom: 1.4rem;
+}
+/* Short vertical accent bar per item — a different color for each school */
+.edu-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  width: 5px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+.edu-item:nth-child(1)::before { background: var(--accent); }       /* teal  */
+.edu-item:nth-child(2)::before { background: var(--accent-warm); }  /* orange */
+.edu-item:nth-child(3)::before { background: #2c7a63; }             /* green */
+.edu-item .edu-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.edu-item .edu-school {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.edu-item .edu-loc {
+  font-weight: 500;
+  color: #7b8794;
+  font-size: 0.95rem;
+}
+.edu-item .edu-date {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.edu-item .edu-degree {
+  margin: 0.35rem 0 0;
+  font-size: 1.02rem;
+}
+.edu-item .edu-thesis {
+  margin: 0.3rem 0 0;
+  color: #52606d;
+  font-size: 0.95rem;
+}
+
+/* =========================================================================
+   Research: landing cover grid (clickable cards → inner pages)
+   ========================================================================= */
+/* Full-width panels, stacked: visualization left, title + summary right */
+.research-cover-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.research-cover {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) 1fr;
+  align-items: stretch;
+  gap: 0;
+  background: var(--surface-alt);            /* light, offset from the page */
+  border: 1px solid rgba(15, 76, 97, 0.10);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.research-cover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  text-decoration: none;
+}
+.research-cover .cover-photo {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  font-weight: 600;
+  overflow: hidden;
+}
+/* distinct gradient per cover (swap for real images later) */
+.cover-1 { background: linear-gradient(135deg, #1e6f8e, #0f4c61); }
+.cover-2 { background: linear-gradient(135deg, #b6552b, #e8743b); }
+.cover-3 { background: linear-gradient(135deg, #2c7a63, #1e6f8e); }
+.cover-4 { background: linear-gradient(135deg, #4b5c8a, #2b3a67); }
+.cover-5 { background: linear-gradient(135deg, #8e5a9e, #5a3b74); }
+.research-cover .cover-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.research-cover .cover-body {
+  padding: 1.6rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.research-cover .cover-body h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-strong);
+  line-height: 1.2;
+}
+.research-cover .cover-body p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #52606d;
+}
+.research-cover .cover-cta {
+  margin-top: auto;
+  font-weight: 700;
+  color: var(--accent-warm);
+  font-size: 0.9rem;
+}
+
+/* Research inner (detail) page */
+.back-link {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+}
+.back-link a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.back-link a:hover { color: var(--accent-strong); }
+.detail-fig {
+  margin: 0 0 1.6rem;
+}
+.detail-fig .placeholder {
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+}
+.detail-list {
+  padding-left: 1.1rem;
+}
+.detail-list li {
+  margin-bottom: 0.55rem;
+  line-height: 1.6;
+}
+.detail-list li strong { color: var(--accent-strong); }
+
+/* =========================================================================
+   Research: full-width panels (figure + text) — legacy, kept for reuse
+   ========================================================================= */
+.research-panel {
+  display: grid;
+  grid-template-columns: minmax(240px, 340px) 1fr;
+  gap: 1.8rem;
+  align-items: stretch;
+  background: var(--surface);
+  border: 1px solid rgba(15, 76, 97, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.6rem;
+  margin-bottom: 2rem;
+  border-top: 5px solid var(--accent);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.research-panel:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+.research-panel .fig {
+  min-height: 100%;
+}
+.research-panel .fig .placeholder {
+  height: 100%;
+  min-height: 210px;
+}
+.research-panel .body h2 {
+  margin: 0 0 0.15rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-strong);
+}
+.research-panel .meta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7b8794;
+  margin-bottom: 0.8rem;
+}
+.research-panel .meta .date {
+  color: var(--accent-warm);
+}
+.research-panel .body > p {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0 0 0.9rem;
+}
+.research-panel ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.research-panel ul li {
+  margin-bottom: 0.45rem;
+  line-height: 1.5;
+}
+.research-panel ul li strong {
+  color: var(--accent-strong);
+}
+
+/* Publications ----------------------------------------------------------- */
+.pub-section {
+  margin-top: 3rem;
+}
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pub-list li {
+  padding: 0.7rem 0 0.7rem 1rem;
+  border-left: 3px solid var(--accent-warm);
+  margin-bottom: 0.7rem;
+  background: var(--surface-alt);
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5;
+}
+.pub-list li .venue {
+  font-style: italic;
+  color: #52606d;
+}
+.pub-list .me {
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+
+/* =========================================================================
+   Projects: photo-style cards with overlaid titles, 3 per row
+   ========================================================================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+.project-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  aspect-ratio: 4 / 3;
+  display: flex;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  isolation: isolate;
+}
+/* the "photo" — a gradient stand-in until a real image is dropped in */
+.project-card .photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.8rem;
+  transition: transform 0.4s ease;
+}
+/* vary the gradient a bit per card for visual rhythm */
+.project-card:nth-child(6n+2) .photo { background: linear-gradient(135deg, #b6552b, var(--accent-warm)); }
+.project-card:nth-child(6n+3) .photo { background: linear-gradient(135deg, #2c7a63, #1e6f8e); }
+.project-card:nth-child(6n+4) .photo { background: linear-gradient(135deg, #4b5c8a, #2b3a67); }
+.project-card:nth-child(6n+5) .photo { background: linear-gradient(135deg, #8e5a9e, #5a3b74); }
+.project-card:nth-child(6n+6) .photo { background: linear-gradient(135deg, #1e6f8e, #0f4c61); }
+
+.project-card .scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(15, 25, 32, 0.85) 0%,
+    rgba(15, 25, 32, 0.35) 45%,
+    rgba(15, 25, 32, 0.05) 100%
+  );
+}
+.project-card .overlay {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding: 1rem 1.1rem 1.1rem;
+  color: #fff;
+  width: 100%;
+}
+.project-card .overlay h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.12rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+.project-card .overlay p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  max-height: 0;
+  transform: translateY(6px);
+  transition: opacity 0.28s ease, max-height 0.28s ease, transform 0.28s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+.project-card:hover .photo { transform: scale(1.08); }
+.project-card:hover .overlay p {
+  opacity: 1;
+  max-height: 6rem;
+  transform: translateY(0);
+}
+.project-card .tag {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  z-index: 2;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+
+/* =========================================================================
+   Responsive
+   ========================================================================= */
+@media (max-width: 800px) {
+  .project-grid { grid-template-columns: repeat(2, 1fr); }
+  .interest-grid { grid-template-columns: repeat(2, 1fr); }
+  .research-cover { grid-template-columns: 1fr; }
+  .research-panel {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  .research-panel .fig .placeholder { min-height: 180px; }
+  .intro {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1.4rem;
+  }
+  .intro-photo { width: 100%; max-width: 300px; }
+  .intro-role::after,
+  .home-section-title::after { margin-left: auto; margin-right: auto; }
+}
+@media (max-width: 520px) {
+  .project-grid { grid-template-columns: 1fr; }
+  .interest-grid { grid-template-columns: 1fr; }
+  .section-head h1 { font-size: 1.9rem; }
+  .intro-name { font-size: 2.2rem; }
+  /* on small screens, always reveal project descriptions */
+  .project-card .overlay p { opacity: 1; max-height: 6rem; transform: none; }
+}
