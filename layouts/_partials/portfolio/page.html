@@ -6,6 +6,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ partial "hooks/head-end/noindex.html" . }}
   <title>{{ if .IsHome }}Bokun Zheng | Simulation, Perception & Robotics{{ else }}{{ .Title }} | Bokun Zheng{{ end }}</title>
   <meta name="description" content="{{ .Description | default .Summary | default $d.intro | plainify }}">
   <link rel="canonical" href="{{ .Permalink }}">

@@ -9,6 +9,8 @@ const failures = [];
 let checked = 0;
 for (const file of htmlFiles) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
+  const noindex = html.match(/<meta\b[^>]*\bname=(?:"robots"|'robots'|robots)[^>]*\bcontent=(?:"noindex"|'noindex'|noindex)[^>]*>/gi) || [];
+  if (noindex.length !== 1) failures.push(`${file}: expected one robots noindex directive, found ${noindex.length}`);
   const pageURL = new URL(prefix + file.replaceAll('\\', '/').replace(/index\.html$/, ''), origin);
   for (const match of html.matchAll(/\b(?:href|src|poster)=(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g)) {
     const value = (match[1] ?? match[2] ?? match[3]).replaceAll('&amp;', '&');
@@ -31,5 +33,6 @@ for (const file of htmlFiles) {
 for (const section of ['blog', 'courses', 'events', 'notes', 'slides', 'projects/pandas', 'projects/scikit', 'projects/pytorch']) {
   if (fs.existsSync(path.join(root, section, 'index.html'))) failures.push(`Unexpected starter/private section: ${section}`);
 }
+if (fs.existsSync(path.join(root, 'sitemap.xml'))) failures.push('Unexpected sitemap.xml: sitemap should remain disabled while the site is noindex');
 if (failures.length) { console.error(failures.join('\n')); process.exit(1); }
 console.log(`Passed: ${htmlFiles.length} pages, ${checked} internal links/assets, base path ${prefix}, no starter/private sections.`);

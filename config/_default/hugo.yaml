@@ -39,7 +39,7 @@ pagination:
   pagerSize: 10
 enableEmoji: true
 enableRobotsTXT: true
-disableKinds: [taxonomy, term]
+disableKinds: [taxonomy, term, sitemap]
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 disableAliases: true
