@@ -23,4 +23,4 @@ The bat animation comes from `assets/media/bat.mp4`, cropped to 320×300 at (164
 
 Use Hugo 0.162.0 extended and the repository's Node dependencies. Run `hugo --minify`, then `npm run pagefind` and `npm run check:site`. Preview with `hugo server --disableFastRender`. Run the content sync before starting the preview; the pinned Hugo version can crash while watching a batch rewrite of content. A stable preview can use `hugo server --watch=false` and be restarted after edits.
 
-The deployment workflow sets the production base URL from GitHub Pages. The local default is the repository-derived `https://zzzzzbk.github.io/website/`; update it if using a custom domain. For a different URL prefix, pass it to the check: `node scripts/check-site.mjs public /your-prefix/`.
+The repository is the GitHub Pages user site `zzzzzbk/zzzzzbk.github.io`, so Hugo's production URL is `https://zzzzzbk.github.io/` and assets resolve from the domain root. The deployment workflow also reads the base URL from GitHub Pages. For a different URL prefix, pass it to the check: `node scripts/check-site.mjs public /your-prefix/`.

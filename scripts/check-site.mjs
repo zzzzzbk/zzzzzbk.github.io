@@ -1,8 +1,8 @@
-// Check production links/assets, including deployments beneath a URL subpath.
+// Check production links/assets at the configured GitHub Pages path.
 import fs from 'node:fs';
 import path from 'node:path';
 const root = path.resolve(process.argv[2] || 'public');
-const prefix = process.argv[3] || '/website/';
+const prefix = process.argv[3] || '/';
 const origin = 'https://zzzzzbk.github.io';
 const htmlFiles = fs.readdirSync(root, { recursive: true }).filter(f => f.endsWith('.html'));
 const failures = [];
