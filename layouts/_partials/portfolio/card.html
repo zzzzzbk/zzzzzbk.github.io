@@ -1,0 +1,22 @@
+<article class="work-card" data-category="{{ .item.category }}">
+  <div class="card-media{{ if .item.concept }} concept-media{{ end }}{{ if .item.lightMedia }} light-media{{ end }}">
+    {{ if .item.video }}
+    <video muted loop playsinline controls preload="none" poster="{{ .item.image | relURL }}" aria-label="{{ .item.alt }}"><source src="{{ .item.video | relURL }}" type="video/mp4">Your browser does not support video. <a href="{{ .item.video | relURL }}">Download the animation</a>.</video>
+    {{ else if .item.concept }}
+    <img src="{{ .item.image | relURL }}" alt="{{ .item.alt }}" loading="lazy" width="960" height="640">
+    {{ else }}
+    <img src="{{ .item.image | relURL }}" alt="{{ .item.alt }}" loading="lazy" width="960" height="640">
+    {{ end }}
+    <span class="media-caption">{{ if .item.concept }}AI concept illustration{{ else }}{{ .item.caption }}{{ end }}</span>
+  </div>
+  <div class="card-content">
+    <div class="eyebrow">{{ if .item.status }}{{ .item.status }}{{ else }}{{ .item.category }} <span> / {{ .item.year }}</span>{{ end }}</div>
+    <h3><a href="{{ printf "%s/%s/" .section .item.slug | relURL }}">{{ .item.title }}</a></h3>
+    <p>{{ .item.summary }}</p>
+    {{ with .item.contribution }}<p class="contribution"><strong>My focus</strong> {{ . }}</p>{{ end }}
+    <ul class="tags" aria-label="Skills used">{{ range .item.tags }}<li>{{ . }}</li>{{ end }}</ul>
+    <a class="text-link" href="{{ printf "%s/%s/" .section .item.slug | relURL }}">Explore {{ if eq .section "research" }}research{{ else }}project{{ end }} <span aria-hidden="true">↗</span></a>
+    {{ with .item.url }}<a class="paper-link" href="{{ . }}">Read paper (PDF) ↗</a>{{ end }}
+  </div>
+</article>
+

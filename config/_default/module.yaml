@@ -11,6 +11,10 @@ imports:
 
 # Install any Hugo Blox within the `hugo-blox/blox/` folder
 mounts:
+  - source: content
+    target: content
+    files:
+      - '! notes/**'
   - source: hugo-blox/blox/community
     target: layouts/_partials/blox/community/
     files:

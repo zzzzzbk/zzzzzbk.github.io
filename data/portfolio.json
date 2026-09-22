@@ -1,0 +1,405 @@
+{
+  "intro": "I build computational tools that connect what we observe to how physical systems behave. My work brings together deformable-body simulation, 3D reconstruction, and robotics—from modeling octopus arms to designing force/torque sensors.",
+  "skills": [
+    {
+      "title": "Physics & simulation",
+      "description": "Turn mechanics into models for deformable structures and physical interaction.",
+      "items": [
+        "Cosserat rods",
+        "Continuum & solid mechanics",
+        "Numerical methods",
+        "Contact & collision",
+        "Finite element analysis",
+        "PyElastica",
+        "MuJoCo",
+        "Gazebo"
+      ]
+    },
+    {
+      "title": "Perception & reconstruction",
+      "description": "Recover geometry and motion from complementary sensing modalities.",
+      "items": [
+        "3D reconstruction",
+        "Computer vision",
+        "Point cloud processing",
+        "Multi-camera motion capture",
+        "Stereo vision",
+        "Ultrasound imaging",
+        "SLAM",
+        "Blender & 3D rendering",
+        "3D Gaussian Splatting"
+      ]
+    },
+    {
+      "title": "Robotics & learning",
+      "description": "Connect dynamics, sensing, and control in robotic systems.",
+      "items": [
+        "ROS",
+        "Model predictive control",
+        "Motion planning",
+        "Reinforcement learning",
+        "Variational autoencoders",
+        "PyTorch",
+        "TensorFlow",
+        "Continuum & cable-driven robots",
+        "Force/torque sensing",
+        "Classical control",
+        "Foundation models"
+      ]
+    },
+    {
+      "title": "Engineering & software",
+      "description": "Build the software and hardware workflows that make models usable.",
+      "items": [
+        "Python",
+        "C++",
+        "MATLAB",
+        "Git & Bash",
+        "SolidWorks & API automation",
+        "Fusion",
+        "Arduino",
+        "Mechatronics",
+        "Rapid prototyping & 3D printing"
+      ]
+    }
+  ],
+  "research": [
+    {
+      "slug": "octopus-biomechanics",
+      "title": "How an octopus arm stiffens to reach",
+      "category": "Biomechanics · Deformable simulation",
+      "status": "Unpublished · Ongoing research",
+      "summary": "How can a soft arm become stiff enough to reach? I study how muscle coordination and fibrous tissue mechanics shape arm deformation, with the aim of explaining how the body itself helps organize movement.",
+      "contribution": "Mechanics-based modeling that links muscle actuation, passive tissue response, and reaching behavior.",
+      "tags": [
+        "Cosserat rods",
+        "Tissue mechanics",
+        "Motor control"
+      ],
+      "video": "media/arm-reaching.mp4",
+      "image": "media/arm-reaching.jpg",
+      "alt": "Octopus arm simulation with visible suckers",
+      "caption": "Octopus arm simulation",
+      "detail": "This ongoing work investigates active stiffening in octopus arms during reaching. The central question is how muscle activity interacts with passive fibrous tissue to change an arm's mechanical response. I develop computational models to connect deformation and tissue mechanics to the physical basis of motor control.\n\nThe broader engineering interest is in compliant systems whose material and structural properties can support control. A manuscript is being prepared for submission; this page provides a high-level overview of unpublished work.",
+      "featured": true
+    },
+    {
+      "slug": "origami-tentacles",
+      "title": "Soft origami tentacles for robust grasping",
+      "category": "Soft robotics · Contact mechanics",
+      "status": "Advanced Science · 2026",
+      "summary": "Simple tendon pulls create complex collective grasping. I model how origami-inspired tentacles deform, make contact, and entangle—connecting individual tentacle design to the behavior of a multi-tentacle gripper.",
+      "contribution": "Computational modeling that combines origami mechanics with Cosserat rods to study deformation and contact-rich grasping.",
+      "tags": [
+        "Soft robotics",
+        "Contact simulation",
+        "Mechanical design"
+      ],
+      "video": "media/gripper.mp4",
+      "image": "media/gripper.jpg",
+      "alt": "Simulated tentacle gripper surrounding a blue cylindrical object",
+      "caption": "Multi-tentacle grasping simulation",
+      "url": "https://naughtonlab.org/pubs/2026_AdvSci.pdf",
+      "detail": "A gripper can use many compliant contacts to secure an object without prescribing every contact in advance. This work studies how locally programmed origami deformation produces collective entanglement when several tendon-driven tentacles operate together.\n\nMy focus is on modeling and simulation: relating origami mechanics to Cosserat-rod representations and investigating the role of morphology and passive mechanics in grasping.\n\nPublished in Advanced Science (2026), e76810. Alec Boron, Bokun Zheng, and Ziyang Zhou contributed equally. DOI: 10.1002/advs.76810.",
+      "featured": true
+    },
+    {
+      "slug": "multimodal-motion-capture",
+      "title": "Seeing octopus motion beyond occlusion",
+      "category": "3D perception · Multimodal sensing",
+      "status": "Unpublished · Ongoing research",
+      "summary": "An octopus continually changes shape and hides parts of its body from view. I combine underwater multi-camera imaging with ultrasound to investigate more complete recovery of its three-dimensional geometry and motion.",
+      "contribution": "Multi-camera system design, 3D reconstruction, and optical–ultrasound processing at the point-cloud level.",
+      "tags": [
+        "3D reconstruction",
+        "Sensor fusion",
+        "Point clouds"
+      ],
+      "image": "media/motion-capture.webp",
+      "alt": "Illustration of an octopus in a tank surrounded by cameras with an ultrasound probe above",
+      "caption": "Multimodal capture setup illustration",
+      "detail": "Reconstructing a highly deformable animal is difficult when its arms overlap and occlude one another. I designed a multi-camera underwater imaging system and developed pipelines to recover octopus geometry and motion.\n\nThis ongoing research investigates ultrasound as a complementary sensing modality and methods for integrating optical and ultrasound measurements at the point-cloud level. The goal is to connect observations of living systems with geometric and physical representations. Findings are unpublished; this page intentionally stays at the level of the research question and approach.",
+      "featured": true
+    },
+    {
+      "slug": "bat-flight",
+      "title": "Learning the structure of bat flight",
+      "category": "Motion reconstruction & learning",
+      "status": "Research · 2021–2023",
+      "featured": false,
+      "summary": "From captured motion to a compact model of flight: reconstructing bat skeletal kinematics and learning how coordinated wing movements vary during maneuvers.",
+      "contribution": "Blender reconstruction, 43-bone skeletal analysis, and a variational autoencoder for compact motion representations.",
+      "tags": [
+        "3D reconstruction",
+        "Blender",
+        "Variational autoencoders",
+        "Bio-inspired robotics"
+      ],
+      "video": "media/bat-flight.mp4",
+      "image": "media/bat-flight.jpg",
+      "lightMedia": true,
+      "alt": "Animated bat skeleton showing coordinated wing and body motion",
+      "caption": "Reconstructed bat skeletal motion",
+      "detail": "Bat flight brings together a highly articulated skeleton and coordinated wing deformation. At Virginia Tech, I connected motion capture, skeletal animation, and machine learning to explore compact representations of maneuvering flight.\n\nI reconstructed flight sequences in Blender and extracted kinematics across 43 bones. A variational autoencoder reduced motion dimensionality by 75%, creating a latent space for exploring motion generation and control. This work also informed bio-inspired flapping-wing design."
+    },
+    {
+      "slug": "cockroach-obstacle-traversal",
+      "title": "Cockroach-inspired traversal through clutter",
+      "category": "Stochastic dynamics & locomotion",
+      "status": "Published · RA-L 2022",
+      "featured": false,
+      "summary": "Inspired by cockroaches moving through grass-like obstacles, a minimal dynamics model explores how propulsion, random motion, and obstacle stiffness shape successful traversal.",
+      "contribution": "Rigid-body and contact simulation, paired with Markov chain Monte Carlo predictions across an obstacle field.",
+      "tags": [
+        "Contact dynamics",
+        "Stochastic modeling",
+        "Monte Carlo",
+        "Locomotion"
+      ],
+      "image": "media/cockroach-model.png",
+      "lightMedia": true,
+      "alt": "Figure 1: circular locomotor approaching a gate formed by two hinged beams",
+      "caption": "Zheng, Xuan & Li · RA-L 2022 · Fig. 1 (author preprint)",
+      "url": "https://arxiv.org/pdf/2112.09075",
+      "detail": "Inspired by insect locomotion, this study models a circular body driven toward two hinged beams while a random lateral force perturbs its path. The simplified system makes it possible to isolate the effects of propulsion, noise, and unequal obstacle stiffness.\n\nStronger propulsion increased traversal probability; random forcing helped only up to a point. With unequal beam stiffness, traversal favored the softer side. A Markov chain Monte Carlo model then used single-gate transition statistics to predict the body’s distribution across a larger obstacle field.\n\nThe figure above is Figure 1 from the [author preprint](https://arxiv.org/abs/2112.09075). Published in [IEEE Robotics and Automation Letters, 7(2), 5119–5126](https://doi.org/10.1109/LRA.2022.3150831)."
+    }
+  ],
+  "projects": [
+    {
+      "slug": "octopus-simulator",
+      "title": "Physics-grounded octopus simulator",
+      "category": "Simulation",
+      "year": "2026",
+      "summary": "An eight-arm, muscle-actuated simulator that carries physics-based deformation into Blender for whole-body animation.",
+      "tags": [
+        "Cosserat rods",
+        "Muscle actuation",
+        "Blender"
+      ],
+      "video": "media/octopus.mp4",
+      "image": "media/octopus.jpg",
+      "alt": "Full-body octopus simulation rendered in Blender",
+      "caption": "Simulation-driven animation",
+      "detail": "I developed a full-body octopus simulator using muscle-actuated Cosserat-rod models for all eight arms. I then baked the simulated deformation into Blender to create underwater motion and whole-body animation.\n\nThe project connects numerical mechanics with a visual workflow, making complex deformable motion easier to inspect and communicate."
+    },
+    {
+      "slug": "pyelastica-gui",
+      "title": "PyElastica GUI + MuJoCo",
+      "category": "Simulation",
+      "year": "2026",
+      "summary": "An interactive simulation workbench for configuring deformable rods, loading results, and exploring motion in a MuJoCo environment.",
+      "tags": [
+        "PyElastica",
+        "MuJoCo",
+        "Scientific software"
+      ],
+      "image": "media/pyelastica-gui.webp",
+      "alt": "PyElastica and MuJoCo GUI showing rod parameters, loads, and a simulated rod",
+      "caption": "Application screenshot",
+      "detail": "I built an interactive GUI for PyElastica and integrated MuJoCo for real-time visualization and environment interaction. The interface brings simulation configuration, data loading, playback, and analysis into one workflow.\n\nThe goal is to make deformable-body simulations easier to set up and inspect, reducing the friction between a numerical model and an interactive engineering tool."
+    },
+    {
+      "slug": "snake-actuation",
+      "title": "From snake motion to actuation",
+      "category": "Perception",
+      "year": "2024",
+      "summary": "Reconstructing motion with more than 1,200 degrees of freedom and using MPC to estimate the inputs behind locomotion.",
+      "tags": [
+        "Motion capture",
+        "Inverse modeling",
+        "MPC"
+      ],
+      "concept": true,
+      "detail": "I processed snake motion-capture data to reconstruct kinematics with more than 1,200 degrees of freedom. I applied model predictive control to estimate control inputs associated with muscle actuation and environmental interaction.\n\nThis project explores how observed motion can inform an estimate of the forces and actuation that produce it.",
+      "image": "media/snake-actuation.webp",
+      "alt": "AI concept illustration for From snake motion to actuation"
+    },
+    {
+      "slug": "quadrotor-mpc",
+      "title": "Predictive control for quadrotors",
+      "category": "Control & learning",
+      "year": "2022",
+      "summary": "Nonlinear dynamics and real-time model predictive control for quadrotor stabilization, with controller tuning to improve performance.",
+      "tags": [
+        "Nonlinear dynamics",
+        "MPC",
+        "Stabilization"
+      ],
+      "concept": true,
+      "detail": "I implemented a quadrotor stabilization controller using nonlinear dynamics and real-time model predictive control. I tuned controller hyperparameters to improve its behavior.\n\nThe project connects a dynamical model to repeated, finite-horizon control decisions for an unstable robotic platform.",
+      "image": "media/quadrotor-mpc.webp",
+      "alt": "AI concept illustration for Predictive control for quadrotors"
+    },
+    {
+      "slug": "bipedal-learning",
+      "title": "Learning to walk in simulation",
+      "category": "Control & learning",
+      "year": "2022",
+      "summary": "A MuJoCo humanoid testbed for comparing more than ten deep reinforcement-learning algorithms, with an average of 900 walking steps.",
+      "tags": [
+        "MuJoCo",
+        "Deep reinforcement learning",
+        "Locomotion"
+      ],
+      "concept": true,
+      "detail": "I set up a humanoid robot in MuJoCo and trained walking controllers using more than ten deep reinforcement-learning algorithms. The project achieved an average of 900 walking steps in simulation.\n\nThe focus was on building the simulation environment and examining learned control across multiple algorithmic approaches.",
+      "image": "media/bipedal-learning.webp",
+      "alt": "AI concept illustration for Learning to walk in simulation"
+    },
+    {
+      "slug": "mobile-robot-slam",
+      "title": "Mapping and autonomous navigation",
+      "category": "Perception",
+      "year": "2020",
+      "summary": "Custom ROS and C++ packages that take a simulated TurtleBot from teleoperation to SLAM and autonomous navigation.",
+      "tags": [
+        "ROS",
+        "C++",
+        "Gazebo",
+        "SLAM"
+      ],
+      "concept": true,
+      "detail": "I developed custom ROS/C++/Gazebo packages for TurtleBot simulation. The workflow supports teleoperation, simultaneous localization and mapping, and autonomous navigation.\n\nThis project brings sensing, mapping, and robot motion together in a simulated mobile-robot system.",
+      "image": "media/mobile-robot-slam.webp",
+      "alt": "AI concept illustration for Mapping and autonomous navigation"
+    },
+    {
+      "slug": "walking-stability",
+      "title": "When a walking gait changes",
+      "category": "Simulation",
+      "year": "2025",
+      "summary": "Bifurcation and stability analysis of a minimal walking model to explore transitions in gait.",
+      "tags": [
+        "Nonlinear dynamics",
+        "Bifurcation",
+        "Stability"
+      ],
+      "concept": true,
+      "detail": "I implemented a classic minimal model of human walking and conducted bifurcation and stability analysis. The project examines how gait behavior changes as model conditions vary.\n\nA deliberately simple model makes it possible to isolate the dynamical mechanisms behind changes in locomotion.",
+      "image": "media/walking-stability.webp",
+      "alt": "AI concept illustration for When a walking gait changes"
+    },
+    {
+      "slug": "robotic-sailboat",
+      "title": "Better sailing through robotics",
+      "category": "Hardware",
+      "year": "2019",
+      "summary": "An Arduino-controlled RC sailboat combining sensing and shore communication to respond to variable wind conditions.",
+      "tags": [
+        "Arduino",
+        "Sensor fusion",
+        "Mechatronics"
+      ],
+      "concept": true,
+      "detail": "I designed and modified an Arduino-controlled RC sailboat with sensor fusion and shore communication. The project focused on improving behavior under variable wind conditions.\n\nIt combines mechanical modifications, embedded control, and communication in a small physical robotic system.",
+      "image": "media/robotic-sailboat.webp",
+      "alt": "AI concept illustration for Better sailing through robotics"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Research Intern",
+      "org": "Analog Devices, Inc.",
+      "period": "May – Aug 2026",
+      "focus": "Computational design for robotic sensing",
+      "text": "Built tools to connect mechanical geometry, structural response, and sensing performance for six-axis force/torque sensors. The work joined design automation with mechanics to explore sensor tradeoffs across force ranges and form factors.",
+      "bullets": [
+        "Developed an AI-assisted natural-language → CAD → FEA workflow using Python and the SolidWorks API.",
+        "Created a systematic sensor-design optimization framework and developed a flexure concept for MEMS-enabled strain sensing.",
+        "Contributed to early-stage discussions on dexterous robotic hands, mechanisms, sensing, and manipulation."
+      ]
+    },
+    {
+      "role": "Research Assistant",
+      "org": "Virginia Tech · Noel Naughton",
+      "period": "Aug 2023 – Present",
+      "focus": "Deformable systems, from observation to simulation",
+      "text": "Develop computational models and perception pipelines for octopus biomechanics and soft robotics, bringing together continuum mechanics, underwater reconstruction, and multimodal sensing.",
+      "bullets": [
+        "Model muscle-driven deformation and contact-rich manipulation using Cosserat rods and continuum mechanics.",
+        "Design underwater imaging workflows and investigate optical–ultrasound integration.",
+        "Contribute numerical tools to the open-source PyElastica framework."
+      ]
+    },
+    {
+      "role": "Research Assistant",
+      "org": "Virginia Tech · Rolf Mueller",
+      "period": "Nov 2021 – Aug 2023",
+      "focus": "Learning compact representations of flight",
+      "text": "Connected motion capture, 3D animation, and deep learning to study bat maneuvering flight and inform bio-inspired robotic design.",
+      "bullets": [
+        "Reconstructed flight sequences in Blender and extracted skeletal kinematics across 43 bones.",
+        "Developed a variational autoencoder that reduced motion dimensionality by 75% and explored its latent space for motion generation.",
+        "Supported iterative flapping-wing drone design with a 20% weight-reduction objective."
+      ]
+    },
+    {
+      "role": "Research Assistant",
+      "org": "Johns Hopkins University · Chen Li",
+      "period": "Jan 2020 – Aug 2021",
+      "focus": "Physics of locomotion through clutter",
+      "text": "Built a numerical simulation framework from scratch to investigate how simple bodies move through obstacle-dense environments.",
+      "bullets": [
+        "Implemented rigid-body dynamics, contact and collision detection, and mechanical constraints.",
+        "Used Markov chain Monte Carlo methods to study stochastic locomotion and the role of random body perturbations."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. in Mechanical Engineering",
+      "school": "Virginia Tech",
+      "date": "Expected May 2027"
+    },
+    {
+      "degree": "M.S. in Mechanical Engineering",
+      "school": "Johns Hopkins University",
+      "date": "May 2021"
+    },
+    {
+      "degree": "B.E. in Processing Equipment and Control Engineering",
+      "school": "Tianjin University",
+      "date": "July 2018"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Stochastic Entanglement of Deterministic Origami Tentacles For Robust Robotic Grasping",
+      "authors": "Alec Boron*, Bokun Zheng*, Ziyang Zhou*, Noel Naughton, Suyi Li",
+      "venue": "Advanced Science · 2026 · e76810",
+      "note": "*Equal contribution",
+      "url": "https://doi.org/10.1002/advs.76810",
+      "pdf": "https://naughtonlab.org/pubs/2026_AdvSci.pdf"
+    },
+    {
+      "title": "A minimalistic stochastic dynamics model of cluttered obstacle traversal",
+      "authors": "Bokun Zheng, Qihan Xuan, Chen Li",
+      "venue": "IEEE Robotics and Automation Letters · 2022 · 7(2), 5119–5126",
+      "url": "https://doi.org/10.1109/LRA.2022.3150831",
+      "pdf": "https://arxiv.org/pdf/2112.09075"
+    }
+  ],
+  "presentations": [
+    {
+      "title": "Ultrasound-incorporated tracking of octopus arm 3D kinematics",
+      "venue": "Society of Engineering Science Annual Meeting · 2026",
+      "format": "Poster",
+      "abstract": "Reconstructing an octopus arm requires tracking a body that continuously changes shape. This work combines multi-camera observations with ultrasound to connect external 3D kinematics with internal anatomical information. The goal is to build a richer measurement pipeline for studying arm deformation and evaluating biomechanical models.",
+      "abstractLabel": "Research summary"
+    },
+    {
+      "title": "Octopus arm stiffening through active exploitation of passive fibrous tissue response",
+      "venue": "Society for Integrative and Comparative Biology · 2026",
+      "format": "Talk",
+      "abstract": "An octopus arm can change stiffness without a rigid skeleton. This work investigates how muscle activation interacts with passive fibrous tissue to regulate stiffness during reaching. Computational modeling links tissue mechanics to whole-arm behavior, exploring how the arm’s physical structure can simplify movement control.",
+      "abstractLabel": "Research summary"
+    },
+    {
+      "title": "Testing whether potential energy landscape can predict stochastic obstacle traversal",
+      "venue": "American Physical Society · 2021",
+      "format": "Talk",
+      "abstract": "Can an energy landscape explain the outcomes of noisy physical interactions with obstacles? This study uses a simplified locomotor and beam-obstacle model to examine how propulsion, random lateral forcing, and obstacle stiffness influence traversal. Stochastic simulations provide a way to test the landscape’s predictions and connect local interactions to movement through clutter.",
+      "abstractLabel": "Research summary"
+    }
+  ]
+}
