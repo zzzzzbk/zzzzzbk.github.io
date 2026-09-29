@@ -37,15 +37,15 @@
     </figure>
     <div class="hero-copy">
       <p class="eyebrow">Mechanical engineer · Researcher · Builder</p>
-      <h1>Bokun Zheng <span class="chinese-name" lang="zh-Hans">郑博昆</span></h1>
+      <h1>Bokun Zheng <span class="chinese-name" lang="zh-Hans"> 郑博昆</span></h1>
       <p class="hero-role">Ph.D. candidate in Mechanical Engineering<br>Virginia Tech · Expected May 2027</p>
-      <p class="hero-lead">Physics-based simulation.<br>3D perception. Robotics.</p>
+      <p class="hero-lead">Physics-based simulation · 3D perception · Robotics.</p>
       <p class="intro">{{ $d.intro }}</p>
       {{ partial "portfolio/social-links.html" . }}
       <div class="actions"><a class="button" href="#research">Explore my work <span aria-hidden="true">↘</span></a></div>
     </div>
   </section>
-  <div class="focus-strip"><div class="wrap"><span>Bridging models and measurements</span><span>Deformable systems</span><span>Robotic sensing</span><span>Physical interaction</span></div></div>
+  <div class="focus-strip"><div class="wrap"><span>Simulation and Modeling</span><span>Deformable Physics</span><span>3D Vision and Reconstruction</span><span>Robotics</span><span>Bioinspiration and Biomechanics</span></div></div>
   <section id="research" class="section wrap"><div class="section-heading"><div><p class="eyebrow">01 / Selected research</p><h2>Understanding motion.<br>Engineering interaction.</h2></div><p>Octopus biology is a demanding testbed for a broader engineering question: how do we reconstruct, model, and control systems that continuously change shape?</p></div><div class="grid research-grid">{{ range where $d.research "featured" true }}{{ partial "portfolio/card.html" (dict "item" . "section" "research") }}{{ end }}</div><div class="section-actions"><a class="text-link" href="{{ "research/" | relURL }}">View all research ↗</a></div></section>
   <section id="industry" class="section wrap industry"><div><p class="eyebrow">02 / Industry experience</p><h2>Mechanics meets<br>design automation.</h2><a class="text-link" href="{{ "experience/" | relURL }}">Full experience & education ↗</a><figure class="sensor-illustration"><img src="{{ "media/force-torque-sensor-v2.webp" | relURL }}" alt="Concept of a force/torque sensor with three radial beam flexures connecting a central hub and an outer ring" width="1536" height="1024" loading="lazy"><figcaption>Three-beam flexure concept · AI illustration</figcaption></figure></div><div><div class="eyebrow">Analog Devices, Inc. · Research Intern · Summer 2026</div><h3>Computational design for six-axis force/torque sensing</h3><p>I built tools that connect geometry, structural response, and sensing performance—helping explore design tradeoffs for robotic sensors.</p><div class="workflow" aria-label="Design workflow"><span>Natural language</span><span aria-hidden="true">→</span><span>CAD</span><span aria-hidden="true">→</span><span>FEA</span><span aria-hidden="true">→</span><span>Design evaluation</span></div><p class="small">Python · SolidWorks API · Mechanical optimization · MEMS-enabled strain sensing</p></div></section>
   <section id="skills" class="section skills-section"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">03 / Technical toolkit</p><h2>Across the engineering stack.</h2></div></div><div class="grid skills-grid">{{ range $d.skills }}<article class="skill-group"><h3>{{ .title }}</h3><p>{{ .description }}</p><ul class="tags">{{ range .items }}<li>{{ . }}</li>{{ end }}</ul></article>{{ end }}</div><p class="small">Exploring applications in Physical AI, world modeling, and real-to-sim / sim-to-real workflows.</p></div></section>
