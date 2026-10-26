@@ -25,7 +25,7 @@
   <button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
   <div class="nav-links" id="nav-links">
     <a href="{{ "research/" | relURL }}">Research</a><a href="{{ "projects/" | relURL }}" {{ if eq $view "projects" }}aria-current="page"{{ end }}>Projects</a><a href="{{ "experience/" | relURL }}" {{ if eq $view "experience" }}aria-current="page"{{ end }}>Experience</a><a href="{{ "#skills" | relURL }}">Skills</a>
-    <a class="nav-resume" href="{{ "uploads/Bokun_Zheng_Resume_master.docx" | relURL }}" download>Résumé <span aria-hidden="true">↓</span></a>
+    <a class="nav-resume" href="{{ "uploads/resume.pdf" | relURL }}" download>Résumé <span aria-hidden="true">↓</span></a>
   </div>
 </nav></header>
 <main id="main" data-pagefind-body>
@@ -74,6 +74,6 @@
   <article class="section wrap detail"><p class="eyebrow">Bokun Zheng · Research</p><h1>{{ .Title }}</h1><div class="detail-text">{{ .Content }}</div></article>
 {{ end }}
 </main>
-<footer id="contact"><div class="wrap"><div class="footer-main"><div><p class="eyebrow">Let’s connect</p><h2>Making sense of<br>the physical world.</h2><p>Interested in robotics, simulation, or 3D perception?<br>I’d be glad to discuss my work and opportunities in industry.</p><a class="contact-email" href="mailto:zhengbk@hotmail.com">zhengbk@hotmail.com ↗</a></div><div class="footer-links"><a href="https://github.com/zzzzzbk">GitHub ↗</a><a href="https://www.linkedin.com/in/bokunz/">LinkedIn ↗</a><a href="https://scholar.google.com/citations?user=uRbmoEYAAAAJ">Google Scholar ↗</a><a href="{{ "uploads/Bokun_Zheng_Resume_master.docx" | relURL }}" download>Download résumé (DOCX) ↓</a><span>Blacksburg, Virginia</span></div></div><div class="footer-bottom"><span>© {{ now.Year }} Bokun Zheng</span><span>Simulation · Perception · Robotics</span><a href="#main">Back to top ↑</a></div></div></footer>
+<footer id="contact"><div class="wrap"><div class="footer-main"><div><p class="eyebrow">Let’s connect</p><h2>Making sense of<br>the physical world.</h2><p>Interested in robotics, simulation, or 3D perception?<br>I’d be glad to discuss my work and opportunities in industry.</p><a class="contact-email" href="mailto:zhengbk@hotmail.com">zhengbk@hotmail.com ↗</a></div><div class="footer-links"><a href="https://github.com/zzzzzbk">GitHub ↗</a><a href="https://www.linkedin.com/in/bokunz/">LinkedIn ↗</a><a href="https://scholar.google.com/citations?user=uRbmoEYAAAAJ">Google Scholar ↗</a><a href="{{ "uploads/resume.pdf" | relURL }}" download>Download résumé (PDF) ↓</a><span>Blacksburg, Virginia</span></div></div><div class="footer-bottom"><span>© {{ now.Year }} Bokun Zheng</span><span>Simulation · Perception · Robotics</span><a href="#main">Back to top ↑</a></div></div></footer>
 </body></html>
 

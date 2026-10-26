@@ -8,7 +8,7 @@ The site uses Hugo with local portfolio layouts. The existing Hugo Blox modules 
 - The main layout is `layouts/_partials/portfolio/page.html`; shared cards are in `layouts/_partials/portfolio/card.html`.
 - Styles and browser behavior are in `assets/css/portfolio.css` and `assets/js/portfolio.js`.
 - Original media remains in `assets/media`. Web-ready videos, posters, and illustrations live in `static/media`.
-- Resume downloads use `static/uploads/Bokun_Zheng_Resume_master.docx`. The older template PDF is not linked.
+- Resume downloads use `static/uploads/resume.pdf`. The master DOCX remains in the project as an editable source copy.
 - Starter examples are retained as drafts and excluded from production output.
 
 ## Content provenance
